@@ -109,6 +109,16 @@ h2 {
 	color: var(--clr-primary-600);
 	font-size: 3.2rem;
 }
+h3 {
+	color: var(--clr-primary-600);
+	font-size: 1.3rem;
+	margin: 1em 0;
+}
+
+p {
+	color: var(--clr-secondary-200);
+	font-size: 1rem;
+}
 
 // btn rules
 .btn {

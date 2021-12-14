@@ -285,6 +285,7 @@ export default {
 			align-items: center;
 		}
 		h3 {
+			color: var(--clr-primary-100);
 			font-size: 2rem;
 			font-weight: 300;
 		}

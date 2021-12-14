@@ -8,7 +8,13 @@
         </div>
         <!-- section main -->
         <div class="section-main">
-            
+            <div class="welcome-card" v-for="welcomeCard, i in welcomeCardsArr" :key="i">
+                <div class="image-container">
+                    <img :src="welcomeCard.image" :alt="welcomeCard.title">
+                </div>
+                <h3>{{ welcomeCard.title }}</h3>
+                <p>{{ welcomeCard.text }}</p>
+            </div>
         </div>
     </section>
 </template>
@@ -17,12 +23,40 @@
 <script>
 export default {
     name: 'AppMainWelcomeSection',
+    data() {
+        return {
+            // emulate API call
+            welcomeCardsArr: [
+                {
+                    image: "./img/schoolbag_alt.png",
+                    title: "Morbi Etos",
+                    text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur nihil expedita placeat nobis aperiam sunt vel itaque, natus sequi corrupti."
+                },
+                {
+                    image: "./img/stroller_alt.png",
+                    title: "Congue Gravida",
+                    text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur nihil expedita placeat nobis aperiam sunt vel itaque, natus sequi corrupti."
+                },
+                {
+                    image: "./img/globe_alt.png",
+                    title: "Maecenas Node",
+                    text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur nihil expedita placeat nobis aperiam sunt vel itaque, natus sequi corrupti."
+                },
+                {
+                    image: "./img/bell_alt.png",
+                    title: "Praesent Morbi",
+                    text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur nihil expedita placeat nobis aperiam sunt vel itaque, natus sequi corrupti."
+                },
+            ],
+        }
+    }
 }
 </script>
 
 <style scoped lang="scss">
 #welcome-section {
     margin: 3rem auto;
+    // title section rules
     .section-title {
         text-align: center;
         h2 {
@@ -30,6 +64,28 @@ export default {
         }
         .section-subtitle {
             color: var(--clr-secondary-200);
+        }
+    }
+    // main section rules
+    .section-main {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+        .welcome-card {
+            margin: 2rem 1rem;
+            text-align: center;
+            &:nth-of-type(odd) .image-container{
+                background-color: var(--clr-primary-300);
+            }
+            &:nth-of-type(even) .image-container{
+                background-color: var(--clr-primary-600);
+            }
+            .image-container {
+                margin: 1.5rem 0;
+                padding: 4em;
+                border-radius: 50%;
+                overflow: hidden;
+            }
         }
     }
 }
