@@ -25,7 +25,7 @@ export default {
     name: 'AppMainWelcomeSection',
     data() {
         return {
-            // emulate API call
+            // emulate API call to populate welcome section with cards
             welcomeCardsArr: [
                 {
                     image: "./img/schoolbag_alt.png",
@@ -88,6 +88,5 @@ export default {
             }
         }
     }
-}
-    
+}    
 </style>

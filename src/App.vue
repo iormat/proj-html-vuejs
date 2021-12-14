@@ -76,6 +76,7 @@ export default {
 
 :root {
 	--clr-primary-100: #fff;
+	--clr-primary-200: #F5F5F5;
 	--clr-primary-300: #EC6F2D;
 	--clr-primary-600: #55509A;
 	--clr-primary-900: #000;
@@ -105,12 +106,14 @@ export default {
 }
 
 // text rules
-h2 {
+h2, h3, h4 {
 	color: var(--clr-primary-600);
+}
+
+h2 {
 	font-size: 3.2rem;
 }
 h3 {
-	color: var(--clr-primary-600);
 	font-size: 1.3rem;
 	margin: 1em 0;
 }

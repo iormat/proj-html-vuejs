@@ -12,7 +12,7 @@
 						<a href="#">
 							<img class="base_img" :src="link.logo" :alt="link.title">
 							<img class="hovered_img" :src="link.logoHovered" :alt="link.title">
-							<h4>{{ link.title }}</h4>
+							<span>{{ link.title }}</span>
 						</a>
 					</li>
 				</ul>
@@ -89,7 +89,6 @@ export default {
 				});
 				this.activePos = i;
 				linksArr[this.activePos].selected = true
-				console.log(this.activePos);
 			}
 		}
 	},
@@ -154,6 +153,9 @@ export default {
 			width: 100%;
 			color: var(--clr-primary-600);
 			text-decoration: none;
+			span {
+				font-weight: bolder;
+			}
 		}
 
 		& img {
