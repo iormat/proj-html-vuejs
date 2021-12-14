@@ -8,7 +8,7 @@
 				</a>
 				<!-- list of header links -->
 				<ul>
-					<li @click.prevent="checkPosition(linksArr, i)" v-for="link, i in linksArr" :key="i">
+					<li :class="link.selected ? 'selected' : '' " @click="checkPosition(linksArr, i)" v-for="link, i in linksArr" :key="i">
 						<a href="#">
 							<img class="base_img" :src="link.logo" :alt="link.title">
 							<img class="hovered_img" :src="link.logoHovered" :alt="link.title">
@@ -25,7 +25,7 @@
 					<span class="friendly_txt">Friendly Atmosphere</span>
 					<h2>Welcoming Place</h2>
 					<span class="subtitle">For Every Child</span>
-					<button>
+					<button class="btn main-btn">
 						<a href="#">buy this theme now</a>
 					</button>
 				</div>
@@ -46,6 +46,24 @@
 						<img src="../assets/img/slider_slide2_img1.png" alt="playing child">
 					</div>
 				</div>
+				<!-- bottom rectangles -->
+				<div class="bottom_section">
+					<div class="small_rectangle"></div>
+					<div class="small_rectangle"></div>
+					<div class="small_rectangle"></div>
+				</div>
+			</div>
+		</section>
+		<!-- enroll your child -->
+		<section class="enroll">
+			<div class="container_small">
+				<h3>How to Enroll Your Child to a Class&quest;</h3>
+				<button class="btn banner-btn">
+					<a href="#">
+						view gallery
+						<i class="fas fa-angle-right"></i>	
+					</a>
+				</button>
 			</div>
 		</section>
 	</header>
@@ -63,10 +81,15 @@ export default {
 		}
 	},
 	methods: {
+		// get current selection
 		checkPosition(linksArr, i) {
 			if(this.activePos !== i){
+				linksArr.forEach(element => {
+					element.selected = false
+				});
 				this.activePos = i;
 				linksArr[this.activePos].selected = true
+				console.log(this.activePos);
 			}
 		}
 	},
@@ -93,7 +116,7 @@ export default {
 		z-index: 7;
 	}
 
-	.container_small {
+	.header-nav .container_small {
 		display: flex;
 		justify-content: space-between;
 	}
@@ -126,7 +149,7 @@ export default {
 
 		& a {
 			padding: 1em .5em;
-			display: inline-block;
+			display: grid;
 			height: 100%;
 			width: 100%;
 			color: var(--clr-primary-600);
@@ -143,6 +166,19 @@ export default {
 		& .hovered_img {
 			display: none;
 		}
+		// selected styling
+		&.selected {
+				background-color: var(--clr-primary-300);
+			& a {
+				color: var(--clr-primary-100);
+			}
+			& .base_img {
+				display: none;
+			}
+			& .hovered_img {
+				display: block;
+			}
+		}
 	}
 	// JUOMBOTRON
 	.jumbotron {
@@ -153,7 +189,7 @@ export default {
 		background-size: contain;
 		// LEFT_SIDE
 		.left_side {
-			width: 50%;
+			width: 40%;
 			padding-top: 150px;
 			.friendly_txt {
 				color: var(--clr-primary-300);
@@ -169,19 +205,8 @@ export default {
 				font-size: 3rem;
 				font-weight: 300;
 			}
-			button {
-				display: block;
+			.btn.main-btn {
 				margin-top: 1.2rem;
-				padding: .8em;
-				border: 0;
-				background-color: var(--clr-primary-300);
-				& a {
-					text-decoration: none;
-					color: var(--clr-primary-100);
-					text-transform: uppercase;
-					font-size: 1rem;
-					padding: .8em;
-				}
 			}
 		}
 		// RIGHT_SIDE
@@ -191,6 +216,7 @@ export default {
 			width: 70px;
 			height: auto;
 		}
+		// jumbo background small images
 		.jumbo_background img{
 			z-index: 1;
 			// brush
@@ -232,6 +258,45 @@ export default {
 			width: 32%;
 			height: auto;
 			left: 42%;
+			top: 0;
+		}
+		// BOTTOM_SECTION
+		.bottom_section {
+			margin-top: 150px;
+			width: 100%;
+			display: flex;
+			justify-content: center;			
+			.small_rectangle {
+				margin: .5rem;
+				width: 60px;
+				height: 20px;
+				border: 2px solid var(--clr-primary-300);
+				&:nth-child(2) {
+					position: relative;
+					bottom: 20px;
+				}
+			}
+		}
+	}
+	//ENROLL SECTION
+	.enroll {
+		padding: 2em 0;
+		background-color: var(--clr-primary-600);
+		color: var(--clr-primary-100);
+		& .container_small {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		h3 {
+			font-size: 2rem;
+			font-weight: 300;
+		}
+		.btn.banner-btn {
+			font-weight: 700;
+			& a i {
+				margin-left: .5rem;
+			}
 		}
 	}
 </style>

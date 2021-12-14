@@ -87,8 +87,29 @@ export default {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
+// container rules
 .container_small {
 	max-width: 1000px;
 	margin: 0 auto;
+}
+
+// btn rules
+.btn {
+	border: 0;
+	& a {
+		display: block;
+		text-decoration: none;
+		color: var(--clr-primary-100);
+		text-transform: uppercase;
+		font-size: 1rem;
+		padding: .8em;
+	}
+	&.banner-btn {
+		background-color: var(--clr-primary-600);
+		border: 2px solid var(--clr-primary-100);
+	}
+	&.main-btn {
+		background-color: var(--clr-primary-300);
+	}
 }
 </style>
