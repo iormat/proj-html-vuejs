@@ -79,6 +79,8 @@ export default {
 	--clr-primary-300: #EC6F2D;
 	--clr-primary-600: #55509A;
 	--clr-primary-900: #000;
+
+	--clr-secondary-200: #9E9E9E;
 }
 * {
 	padding: 0;
@@ -96,6 +98,17 @@ export default {
 	max-width: 1000px;
 	margin: 0 auto;
 }
+// image divider rules
+.img-divider {
+	display: block;
+	margin: 1rem auto;
+}
+
+// text rules
+h2 {
+	color: var(--clr-primary-600);
+	font-size: 3.2rem;
+}
 
 // btn rules
 .btn {
@@ -106,14 +119,24 @@ export default {
 		color: var(--clr-primary-100);
 		text-transform: uppercase;
 		font-size: 1rem;
+		font-weight: bolder;
 		padding: .8em;
 	}
 	&.banner-btn {
 		background-color: var(--clr-primary-600);
 		border: 2px solid var(--clr-primary-100);
+		&:hover {
+			background-color: var(--clr-primary-100);
+			a {
+				color: var(--clr-primary-600);
+			}
+		}
 	}
 	&.main-btn {
 		background-color: var(--clr-primary-300);
+		&:hover {
+			background-color: var(--clr-primary-600);
+		}
 	}
 }
 </style>

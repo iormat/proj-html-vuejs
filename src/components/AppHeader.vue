@@ -60,7 +60,7 @@
 				<h3>How to Enroll Your Child to a Class&quest;</h3>
 				<button class="btn banner-btn">
 					<a href="#">
-						view gallery
+						learn more
 						<i class="fas fa-angle-right"></i>	
 					</a>
 				</button>
@@ -195,10 +195,6 @@ export default {
 				color: var(--clr-primary-300);
 				font-family: 'Handlee', 'Roboto', sans-serif;
 				font-size: 2.5rem;
-			}
-			h2 {
-				color: var(--clr-primary-600);
-				font-size: 3.2rem;
 			}
 			.subtitle {
 				color: var(--clr-primary-600);
