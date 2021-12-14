@@ -82,6 +82,7 @@ export default {
 	--clr-primary-900: #000;
 
 	--clr-secondary-200: #9E9E9E;
+	--clr-secondary-400: #7B7A7A;
 }
 * {
 	padding: 0;

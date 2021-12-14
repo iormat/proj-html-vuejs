@@ -1,6 +1,7 @@
 <template>
     <section id="overview">
         <div class="container_small">
+            <!-- left side -->
             <div class="side overview-sx">
                 <nav class="overview_nav">
                     <h2>Overview</h2>
@@ -32,6 +33,7 @@
                     </div>
                 </div>
             </div>
+            <!-- right side -->
             <div class="side overview-dx">
                 <div class="slider">
                     <img :src="sliderArr[activePos].sliderImage" alt="">
