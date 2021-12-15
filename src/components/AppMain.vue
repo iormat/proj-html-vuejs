@@ -11,6 +11,8 @@
         <AppMainGallerySection/>
 
         <AppMainWhatsNewSection/>
+
+        <AppMainMapsSection/>
     </main>
 </template>
 
@@ -22,6 +24,7 @@ import AppMainClassesSection from "./AppMainClassesSection.vue";
 import AppMainStrenghtsSection from "./AppMainStrenghtsSection.vue";
 import AppMainGallerySection from "./AppMainGallerySection.vue";
 import AppMainWhatsNewSection from "./AppMainWhatsNewSection.vue";
+import AppMainMapsSection from "./AppMainMapsSection.vue";
 
 export default {
     name: 'AppMain',
@@ -32,6 +35,7 @@ export default {
         AppMainStrenghtsSection,
         AppMainGallerySection,
         AppMainWhatsNewSection,
+        AppMainMapsSection,
     }
 }
 </script>
