@@ -14,7 +14,7 @@
                     <h3>Our philosophy is learning through play as we offer a stimulating environment for children</h3>
                     <div class="flex-container">
                         <div class="image_container">
-                            <img src="../assets/img/clock_alt.png" alt="clock image">
+                            <img loading="lazy" src="../assets/img/clock_alt.png" alt="clock image">
                         </div>
                         <div class="text">
                             <h4>Full day Session</h4>
@@ -24,7 +24,7 @@
                     <!-- second info -->
                     <div class="flex-container">
                         <div class="image_container">
-                            <img src="../assets/img/clock_alt.png" alt="clock image">
+                            <img loading="lazy" src="../assets/img/clock_alt.png" alt="clock image">
                         </div>
                         <div class="text">
                             <h4>Full day Session</h4>
@@ -36,13 +36,13 @@
             <!-- right side -->
             <div class="side overview-dx">
                 <div class="slider">
-                    <img :src="sliderArr[activePos].sliderImage" alt="">
+                    <img loading="lazy" :src="sliderArr[activePos].sliderImage" alt="">
                     <div class="arrow prev" @click="prevImg"><i class="fas fa-angle-left"></i></div>
                     <div class="arrow next" @click="nextImg"><i class="fas fa-angle-right"></i></div>
                 </div>
                 <div class="thumb-container">
                     <div class="thumbs" v-for="slide, i in sliderArr" :key="i" @click="checkPosition(sliderArr, i)">
-                        <img :class="slide.selected ? 'active' : '' " :src="slide.thumbImage" alt="teaching environment">
+                        <img loading="lazy" :class="slide.selected ? 'active' : '' " :src="slide.thumbImage" alt="teaching environment">
                     </div>
                 </div>
             </div>

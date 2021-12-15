@@ -28,7 +28,7 @@
                     </div>
                 </div>
                 <div class="card_image">
-                    <img :src="classCard.image" alt="child class representation">
+                    <img loading="lazy" :src="classCard.image" alt="child class representation">
                     <button class="btn main-btn">
                         <a href="#">
                             read more <i class="fas fa-angle-right"></i>

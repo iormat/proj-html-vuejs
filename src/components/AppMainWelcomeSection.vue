@@ -4,13 +4,13 @@
         <div class="section-title">
             <h2>Welcome to Fable</h2>
             <span class="section-subtitle">Fable daycare&comma; preschool&comma; and kindergarten</span>
-            <img class="img-divider" src="../assets/img/header_divider.png" alt="styled divider">
+            <img loading="lazy" class="img-divider" src="../assets/img/header_divider.png" alt="styled divider">
         </div>
         <!-- section main -->
         <div class="section-main">
             <div class="welcome-card" v-for="welcomeCard, i in welcomeCardsArr" :key="i">
                 <div class="image-container">
-                    <img :src="welcomeCard.image" :alt="welcomeCard.title">
+                    <img loading="lazy" :src="welcomeCard.image" :alt="welcomeCard.title">
                 </div>
                 <h3>{{ welcomeCard.title }}</h3>
                 <p>{{ welcomeCard.text }}</p>

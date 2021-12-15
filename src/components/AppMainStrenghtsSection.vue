@@ -18,7 +18,7 @@
             <div class="priorities">
                 <div class="card" v-for="card, i in cardsArr" :key="i">
                     <div class="image_container">
-                        <img :src="card.image" :alt="card.title">
+                        <img loading="lazy" :src="card.image" :alt="card.title">
                     </div>
                     <div class="text_container">
                         <h3> {{card.title}} </h3>

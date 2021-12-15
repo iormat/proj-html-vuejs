@@ -2,9 +2,9 @@
     <section id="gallery">
         <div class="gallery_photos">
             <div class="photo" v-for="photo, i in photosArr" :key="i">
-                <img :src="photo.image" alt="published children photos">
+                <img loading="lazy" :src="photo.image" alt="published children photos">
                 <div class="add_photo">
-                    <img src="../assets/img/image_overlay.png" alt="add new photo">
+                    <img loading="lazy" src="../assets/img/image_overlay.png" alt="add new photo">
                 </div>
             </div>
         </div>

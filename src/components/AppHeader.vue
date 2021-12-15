@@ -11,7 +11,7 @@
 					<li :class="link.selected ? 'selected' : '' " @click="checkPosition(linksArr, i)" v-for="link, i in linksArr" :key="i">
 						<a href="#">
 							<img class="base_img" :src="link.logo" :alt="link.title">
-							<img class="hovered_img" :src="link.logoHovered" :alt="link.title">
+							<img loading="lazy" class="hovered_img" :src="link.logoHovered" :alt="link.title">
 							<span>{{ link.title }}</span>
 						</a>
 					</li>
