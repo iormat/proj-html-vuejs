@@ -12,6 +12,9 @@
                 <time> {{article.date}} </time>
                 <div class="image-container">
                     <img loading="lazy" :src="article.image" :alt="article.title">
+                    <div class="more_info">
+                        <img loading="lazy" src="../assets/img/image_overlay.png" alt="more info">
+                    </div> 
                     <span class="counter"> {{ article.counter }} </span>
                 </div>
                 <h3> {{article.title}} </h3>
@@ -24,7 +27,7 @@
                         {{article.publisher}} 
                     </span>
                     <span class="actvity-genre">
-                        <img loading="lazy" src="../assets/img/category.png" :alt="article.activityGenre"> 
+                        <img loading="lazy" src="../assets/img/category.png" :alt="article.activityGenre">
                         {{article.activityGenre}} 
                     </span>
                 </footer>
@@ -103,6 +106,23 @@ export default {
                     width: 100%;
                     display: block;
                     margin-top: 1rem;
+                }
+                .more_info {
+                    display: none;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    background-color: #55509aab;
+                    padding: 2em;
+                    border-radius: 50%;
+                    img {
+                        width: 2rem;
+                        height: 2rem;
+                    }
+                }           
+                &:hover .more_info {
+                    display: block;
                 }
             }
             .counter {

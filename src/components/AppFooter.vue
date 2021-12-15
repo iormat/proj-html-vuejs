@@ -5,17 +5,20 @@
             :contacts="contactsArr"
             />
 
+            <AppFooterFormSection/>
         </div>
     </footer>
 </template>
 
 <script>
 import AppFooterContactUsSection from "./AppFooterContactUsSection.vue";
+import AppFooterFormSection from "./AppFooterFormSection.vue";
 
 export default {
     name: 'AppFooter',
     components: {
         AppFooterContactUsSection,
+        AppFooterFormSection,
     },
     data() {
         return {
