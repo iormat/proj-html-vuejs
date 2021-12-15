@@ -85,6 +85,9 @@ export default {
         h2 {
             font-weight: lighter;
         }
+        .section-subtitle {
+            color: var(--clr-secondary-200);
+        }
         // article styles
         .articles {
             display: grid;
