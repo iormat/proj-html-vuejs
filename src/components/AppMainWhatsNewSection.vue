@@ -6,8 +6,8 @@
             <span class="section-subtitle">Keep up to date with the latest news</span>
             <img loading="lazy" class="img-divider" src="../assets/img/header_divider.png" alt="styled divider">
         </div>
-            <!-- articles -->
-            <div class="articles">
+        <!-- articles -->
+        <div class="articles">
             <article v-for="article, i in articlesArr" :key="i">
                 <time> {{article.date}} </time>
                 <div class="image-container">

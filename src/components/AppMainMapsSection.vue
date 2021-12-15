@@ -13,5 +13,9 @@ export default {
 <style scoped lang="scss">
     #maps {
         margin: 2rem 0;
+        img {
+            width: 100%;
+            display: block;
+        }
     }
 </style>

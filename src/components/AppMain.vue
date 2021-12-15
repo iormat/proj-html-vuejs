@@ -10,6 +10,8 @@
 
         <AppMainGallerySection/>
 
+        <AppMainStaffSection/>
+
         <AppMainWhatsNewSection/>
 
         <AppMainMapsSection/>
@@ -23,6 +25,7 @@ import AppMainOverviewSection from "./AppMainOverviewSection.vue";
 import AppMainClassesSection from "./AppMainClassesSection.vue";
 import AppMainStrenghtsSection from "./AppMainStrenghtsSection.vue";
 import AppMainGallerySection from "./AppMainGallerySection.vue";
+import AppMainStaffSection from "./AppMainStaffSection.vue";
 import AppMainWhatsNewSection from "./AppMainWhatsNewSection.vue";
 import AppMainMapsSection from "./AppMainMapsSection.vue";
 
@@ -34,6 +37,7 @@ export default {
         AppMainClassesSection,
         AppMainStrenghtsSection,
         AppMainGallerySection,
+        AppMainStaffSection,
         AppMainWhatsNewSection,
         AppMainMapsSection,
     }

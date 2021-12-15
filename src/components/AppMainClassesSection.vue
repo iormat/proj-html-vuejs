@@ -6,6 +6,7 @@
             <span class="section-subtitle">Our preschool program has four dedicated classes</span>
             <img class="img-divider" src="../assets/img/header_divider.png" alt="styled divider">
         </div>
+        <!-- section plans -->
         <div class="plans-introduction">
             <div class=" intro introduction_title">
                 <h3>We provided four classes with nine to twenty children each aged twelve month to nive years of age&period;</h3>
@@ -88,6 +89,7 @@ export default {
     #classes {
         margin: 2rem auto;
     }
+    // title section
     .section-title {
         text-align: center;
         h2 {
@@ -97,6 +99,7 @@ export default {
             color: var(--clr-secondary-200);
         }
     }
+    // plans
     .plans-introduction {
         display: flex;
         align-items: flex-start;
@@ -115,6 +118,7 @@ export default {
             }
         }
     }
+    // cards
     .cards {
         display: grid;
         gap: 1rem;
@@ -172,5 +176,4 @@ export default {
             }
         }
     }
-
 </style>
