@@ -85,7 +85,7 @@ export default {
                     role: "Teacher",
                     description: " have completed a Graduate Diploma in Early Childhood Teaching. I have worked with children aged from six weeks to eight years. This is my second year at Fable.",
                     image: "./img/team_04.jpg",
-                    social1: ".img/youtube.png",
+                    social1: "./img/youtube.png",
                     social2: "./img/twitter.png",
                     social3: "./img/googleplus.png",
                 },

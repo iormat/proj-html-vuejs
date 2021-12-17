@@ -15,7 +15,7 @@
                 </label>
             </div>
 
-            <textarea id="message" rows="10" placeholder="Your Message *"></textarea>
+            <textarea id="message" rows="8" placeholder="Your Message *"></textarea>
         </form>
         <button class="btn main-btn">
             <a href="#"> send message </a>
@@ -46,7 +46,7 @@ export default {
             width: 100%;
             font-size: 1rem;
             padding: .5rem;
-            border: 1px solid var(--clr-primary-200);
+            border: 1px solid var(--clr-secondary-200);
         }
     }
     button {

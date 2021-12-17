@@ -114,9 +114,10 @@ export default {
                     left: 50%;
                     transform: translate(-50%, -50%);
                     background-color: #55509aab;
-                    padding: 2em;
+                    padding: 2.2em;
                     border-radius: 50%;
                     img {
+                        margin: 0;
                         width: 2rem;
                         height: 2rem;
                     }
